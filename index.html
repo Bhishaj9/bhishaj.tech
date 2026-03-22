@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BHISHAJ TECH | Precision Systems</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-dim": "#131313",
+              "on-secondary-fixed-variant": "#5b4307",
+              "error": "#ffb4ab",
+              "on-tertiary-container": "#005d6d",
+              "on-tertiary": "#003640",
+              "on-surface-variant": "#d4c5ab",
+              "surface-container-highest": "#353534",
+              "error-container": "#93000a",
+              "outline": "#9c8f78",
+              "surface-container-high": "#2a2a2a",
+              "tertiary": "#b4efff",
+              "on-surface": "#e5e2e1",
+              "on-tertiary-fixed-variant": "#004e5c",
+              "secondary-fixed-dim": "#e5c27b",
+              "on-secondary": "#402d00",
+              "surface-container": "#201f1f",
+              "on-background": "#e5e2e1",
+              "background": "#131313",
+              "on-primary": "#402d00",
+              "surface-container-low": "#1c1b1b",
+              "on-secondary-fixed": "#261a00",
+              "on-primary-container": "#6d5000",
+              "primary": "#ffe2ab",
+              "tertiary-fixed-dim": "#00d9fc",
+              "surface-bright": "#393939",
+              "surface-tint": "#fbbc00",
+              "primary-container": "#ffbf00",
+              "on-primary-fixed": "#261a00",
+              "on-secondary-container": "#d6b46f",
+              "on-tertiary-fixed": "#001f26",
+              "tertiary-fixed": "#aaedff",
+              "surface-container-lowest": "#0e0e0e",
+              "on-error": "#690005",
+              "primary-fixed-dim": "#fbbc00",
+              "on-primary-fixed-variant": "#5c4300",
+              "inverse-primary": "#795900",
+              "surface-variant": "#353534",
+              "secondary-fixed": "#ffdfa0",
+              "surface": "#131313",
+              "inverse-surface": "#e5e2e1",
+              "outline-variant": "#504532",
+              "secondary-container": "#5d4509",
+              "secondary": "#e5c27b",
+              "primary-fixed": "#ffdfa0",
+              "inverse-on-surface": "#313030",
+              "tertiary-container": "#04dcff",
+              "on-error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .glass-panel {
+        background: rgba(19, 19, 19, 0.6);
+        backdrop-filter: blur(60px) saturate(180%);
+        -webkit-backdrop-filter: blur(60px) saturate(180%);
+      }
+      .grain-overlay {
+        position: fixed;
+        top: 0; left: 0; width: 100%; height: 100%;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.005;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(2deg); }
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<div class="grain-overlay"></div>
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 py-3 bg-neutral-900/60 rounded-full mt-6 mx-auto max-w-5xl shadow-[0_20px_40px_rgba(251,188,0,0.04)] backdrop-blur-[60px]">
+<div class="text-xl font-bold tracking-tighter text-neutral-100 font-headline">BHISHAJ TECH</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-neutral-400 hover:text-neutral-100 transition-colors" href="#services">Services</a>
+<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-neutral-400 hover:text-neutral-100 transition-colors" href="#portfolio">Portfolio</a>
+<a class="font-['Space_Grotesk'] tracking-tight text-sm uppercase text-neutral-400 hover:text-neutral-100 transition-colors" href="#verification">Verification</a>
+</div>
+<a href="#contact" class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-headline text-sm font-bold tracking-tight scale-100 active:scale-90 transition-transform inline-block">
+        Contact Us
+    </a>
+</nav>
+<main class="relative">
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col justify-center px-6 md:px-12 pt-32 pb-20 overflow-hidden">
+<div class="max-w-7xl mx-auto w-full grid md:grid-cols-12 gap-12 items-center">
+<!-- Left Side: Content -->
+<div class="md:col-span-7 z-10">
+<h1 class="text-6xl md:text-8xl font-headline font-bold leading-[0.9] tracking-tighter mb-8 text-neutral-100">
+                    Precision Systems.<br/>
+<span class="text-primary">Engineered for Growth.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-xl mb-12 font-light leading-relaxed">
+                    Official Micro Services Enterprise specializing in high-performance digital infrastructure and specialized software engineering.
+                </p>
+<a href="#contact" class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-headline font-bold text-lg hover:shadow-[0_0_30px_rgba(255,191,0,0.3)] transition-all inline-block">
+                        Initialize Project
+                    </a>
+</div>
+<!-- Right Side: High-impact 3D Abstract Visual -->
+<div class="md:col-span-5 relative h-[400px] md:h-[600px] flex items-center justify-center">
+<div class="relative w-full h-full flex items-center justify-center animate-float">
+<!-- Glassmorphism Elements -->
+<div class="absolute w-72 h-72 rounded-full bg-primary/20 blur-[60px]"></div>
+<div class="absolute w-64 h-64 glass-panel border border-white/10 rounded-3xl rotate-12 flex items-center justify-center shadow-2xl">
+<span class="material-symbols-outlined text-primary text-[120px] opacity-80" style="font-variation-settings: 'wght' 100;">deployed_code</span>
+</div>
+<div class="absolute w-48 h-48 glass-panel border border-white/10 rounded-3xl -rotate-12 translate-x-12 -translate-y-12 flex items-center justify-center shadow-2xl z-20">
+<span class="material-symbols-outlined text-tertiary text-[80px] opacity-60" style="font-variation-settings: 'wght' 200;">architecture</span>
+</div>
+<!-- Particle Lines (Abstract Visualization) -->
+<svg class="absolute inset-0 w-full h-full opacity-30 pointer-events-none" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<circle cx="200" cy="200" fill="none" r="180" stroke="url(#grad1)" stroke-dasharray="10 20" stroke-width="0.5"></circle>
+<path d="M100 100 L300 300 M300 100 L100 300" opacity="0.5" stroke="white" stroke-width="0.2"></path>
+<defs>
+<linearGradient id="grad1" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:var(--tw-primary);stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:var(--tw-tertiary);stop-opacity:1"></stop>
+</linearGradient>
+</defs>
+</svg>
+</div>
+</div>
+</div>
+<!-- Background Decorative Elements -->
+<div class="absolute -z-10 top-1/4 -right-1/4 w-[600px] h-[600px] bg-primary/5 blur-[120px] rounded-full"></div>
+<div class="absolute -z-10 bottom-0 -left-1/4 w-[400px] h-[400px] bg-tertiary/5 blur-[100px] rounded-full"></div>
+</section>
+<!-- Service Grid -->
+<section class="py-32 px-6 md:px-12 bg-surface-container-lowest" id="services">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-sm font-headline text-primary uppercase tracking-[0.3em] mb-4">Core Capabilities</h2>
+<h3 class="text-4xl md:text-5xl font-headline font-bold text-neutral-100 leading-tight">NIC Certified Technical Architectures</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+<!-- Service 1 -->
+<div class="group p-8 rounded-2xl border border-outline-variant/10 hover:bg-surface-container-highest transition-all duration-500 bg-surface-container-high/60 backdrop-blur-[40px]">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">terminal</span>
+<div class="text-xs font-mono text-outline-variant mb-2">NIC: 62011</div>
+<h4 class="text-xl font-headline font-bold text-neutral-100 mb-4">Custom Software Development</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Custom Software Development - Writing, modifying, and testing computer programs.</p>
+</div>
+<!-- Service 2 -->
+<div class="group p-8 rounded-2xl border border-outline-variant/10 hover:bg-surface-container-highest transition-all duration-500 bg-surface-container-high/60 backdrop-blur-[40px]">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">code_blocks</span>
+<div class="text-xs font-mono text-outline-variant mb-2">NIC: 62012</div>
+<h4 class="text-xl font-headline font-bold text-neutral-100 mb-4">Web-Page Designing</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Frontend architecture, responsive UI engineering, and interactive web interfaces.</p>
+</div>
+<!-- Service 3 -->
+<div class="group p-8 rounded-2xl border border-outline-variant/10 hover:bg-surface-container-highest transition-all duration-500 bg-surface-container-high/60 backdrop-blur-[40px]">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">settings_suggest</span>
+<div class="text-xs font-mono text-outline-variant mb-2">NIC: 62020</div>
+<h4 class="text-xl font-headline font-bold text-neutral-100 mb-4">Computer Consultancy &amp; Facilities Management</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Technical advisory, infrastructure planning, and facilities management services.</p>
+</div>
+<!-- Service 4 -->
+<div class="group p-8 rounded-2xl border border-outline-variant/10 hover:bg-surface-container-highest transition-all duration-500 bg-surface-container-high/60 backdrop-blur-[40px]">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">database</span>
+<div class="text-xs font-mono text-outline-variant mb-2">NIC: 63111</div>
+<h4 class="text-xl font-headline font-bold text-neutral-100 mb-4">Data Processing Services</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Data Processing Services including report writing, real-time ingestion pipelines, and cloud-native hosting.</p>
+</div>
+<!-- Service 5 -->
+<div class="group p-8 rounded-2xl border border-outline-variant/10 hover:bg-surface-container-highest transition-all duration-500 bg-surface-container-high/60 backdrop-blur-[40px]">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">extension</span>
+<div class="text-xs font-mono text-outline-variant mb-2">NIC: 62099</div>
+<h4 class="text-xl font-headline font-bold text-neutral-100 mb-4">Other IT &amp; Computer Services n.e.c.</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Other Information Technology &amp; Computer Service Activities not elsewhere classified.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-32 px-6 md:px-12" id="portfolio">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-24">
+<h2 class="text-sm font-headline text-primary uppercase tracking-[0.3em] mb-4">Selected Deployments</h2>
+<h3 class="text-4xl md:text-6xl font-headline font-bold text-neutral-100">Engineered Solutions</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Project 1: Continuity -->
+<a href="https://huggingface.co/spaces/Bhishaj/Continuity" target="_blank" rel="noopener noreferrer" class="group relative overflow-hidden rounded-3xl bg-surface-container aspect-[3/4] flex flex-col justify-end p-8 border border-white/5">
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="AI video orchestration pipeline visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAanAVPDSCrdKgw4fKL4W_6jbvH_xG0eXrToITw0glE3zRzXrB-cJbF2LGAlxVkaGtknD7_LrXm7DJJ62iYBP9bdkyjVWjS3U-bQD6wrHOV4M4Z1xH1KsxH8W6KXrX4AJHeooXzGm9cJBAzcrhM1O5CSIXWomgFt03DthtObkdY_4EebSFHAIRvcz9hxhTS7QFZkLHQR2uTUkSxRrrnhiTR0QxALgyEm_E-I2cGR_ema6BW_s6i72elkCTg2jnLwI4s5bFGI8Hcfxhz"/>
+<div class="relative z-10 glass-panel p-6 rounded-2xl border border-white/10">
+<div class="text-primary text-xs font-bold uppercase mb-2">Video Orchestration</div>
+<h4 class="text-2xl font-headline font-bold text-white mb-2">Project Continuity</h4>
+<p class="text-sm text-neutral-300">A distributed, fault-tolerant SaaS for AI-driven video bridging. Orchestrates Gemini 2.0 Flash, Veo 3.1, and FFmpeg via a Redis-backed decoupled producer-consumer architecture.</p>
+</div>
+</a>
+<!-- Project 2: MerchFlow AI -->
+<a href="https://huggingface.co/spaces/Bhishaj/MerchFlow-AI" target="_blank" rel="noopener noreferrer" class="group relative overflow-hidden rounded-3xl bg-surface-container aspect-[3/4] flex flex-col justify-end p-8 border border-white/5">
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="AI e-commerce catalog pipeline visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBye4CIuhUJdcxnZ496x8Vz0p6orNQq9bQi4q79RCfa0SEB59ZhVozGOTS1KJ3e99UeVxYA8fcQ-WS96L-riBWBDBSLfmS7HuOpcTYhy1od8_SgsXoGRaAFx3dDs0cgPf6ko1zKlIuq8wPcZj7OsBmncx_-r81laIPqzPTJpuJpOvChEkpS7j4zP1OfbjdTysNnopbo5oy6_q4fdaUKsJmFRmiIul-dCymLRO7ySOHmyEqnazwD6xj74uq-rvBof3eAYqnr5U1Xw4fX"/>
+<div class="relative z-10 glass-panel p-6 rounded-2xl border border-white/10">
+<div class="text-primary text-xs font-bold uppercase mb-2">E-Commerce Intelligence</div>
+<h4 class="text-2xl font-headline font-bold text-white mb-2">MerchFlow AI</h4>
+<p class="text-sm text-neutral-300">Autonomous catalog pipeline converting product imagery into SEO-optimized listings. Orchestrates Computer Vision, Pinecone RAG, and Meta Llama 3.3 for zero-human intervention creation.</p>
+</div>
+</a>
+<!-- Project 3: Anvesha AI -->
+<a href="https://huggingface.co/spaces/Bhishaj/Anvesha-AI" target="_blank" rel="noopener noreferrer" class="group relative overflow-hidden rounded-3xl bg-surface-container aspect-[3/4] flex flex-col justify-end p-8 border border-white/5">
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 group-hover:scale-110 transition-transform duration-700" data-alt="Sovereign Indian search intelligence visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF0z2HUu-jS6ZklbNvEYhD19qTTq6Ky7pOKcjLioW7Rpy2RB3YW4jYlr80zoikid19QPdCW-BzfXOPddtWyMHYdh0rKa2gESA0Ljk5U2M4XEX2HM67__o-0b3KrlRVtXERSIxtQf-iaPkXOPofBgnHXgGeIO6bmpIELStz-F2Yv7UAjBMvdGQiOptaweptYZS3pondGgYOI65Rvwath7q1caeXIw76uzHwYGSdduelz31Sp_Q0Q_A_x0hPb3CSquJ8qIG7uo5F1TcQ"/>
+<div class="relative z-10 glass-panel p-6 rounded-2xl border border-white/10">
+<div class="text-primary text-xs font-bold uppercase mb-2">Sovereign Search</div>
+<h4 class="text-2xl font-headline font-bold text-white mb-2">Anvesha AI</h4>
+<p class="text-sm text-neutral-300">Sovereign Indian intelligence engine transforming raw search into citation-rich 'Sutra' reports. Features the Sarvam Indic LLM pipeline and prioritized .gov.in indexing for strategic relevance.</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Verification Section -->
+<section class="py-32 px-6 md:px-12 bg-surface-container-low" id="verification">
+<div class="max-w-7xl mx-auto">
+<div class="glass-panel p-12 md:p-20 rounded-[3rem] border border-white/5 overflow-hidden relative">
+<div class="absolute top-0 right-0 p-12 opacity-10">
+<span class="material-symbols-outlined text-[12rem]">verified_user</span>
+</div>
+<div class="relative z-10 grid md:grid-cols-2 gap-16 items-center">
+<div>
+<div class="inline-block bg-primary/20 text-primary px-4 py-2 rounded-full font-headline text-xs font-bold tracking-widest mb-8">
+                            OFFICIALLY CLASSIFIED: MICRO SERVICES ENTERPRISE
+                        </div>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-neutral-100 mb-8 leading-tight">Official Verification &amp; Compliance</h2>
+<p class="text-on-surface-variant mb-12 text-lg">BHISHAJ TECHNOLOGIES is an officially registered Micro Enterprise under the Ministry of Micro, Small and Medium Enterprises, Government of India.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-xl bg-surface-container-highest flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-primary">fingerprint</span>
+</div>
+<div>
+<div class="text-xs text-outline font-bold uppercase">Udyam Registration Number</div>
+<div class="text-xl font-headline font-bold text-neutral-100">UDYAM-UP-02-0108589</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="h-12 w-12 rounded-xl bg-surface-container-highest flex items-center justify-center border border-white/10">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<div class="text-xs text-outline font-bold uppercase">Headquarters</div>
+<div class="text-xl font-headline font-bold text-neutral-100">Flat 10, Shivam Tent House, Saray Dhauda, Chharra Road, Atrauli, Aligarh, UP 202280</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/5 p-8 rounded-2xl border border-white/5 flex flex-col items-center text-center backdrop-blur-2xl">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" style="font-variation-settings: 'FILL' 1;">security</span>
+<span class="text-xs font-bold uppercase tracking-widest text-neutral-400">Security Verified</span>
+</div>
+<div class="bg-white/5 p-8 rounded-2xl border border-white/5 flex flex-col items-center text-center backdrop-blur-2xl">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<span class="text-xs font-bold uppercase tracking-widest text-neutral-400">MSME Compliant</span>
+</div>
+<div class="bg-white/5 p-8 rounded-2xl border border-white/5 flex flex-col items-center text-center backdrop-blur-2xl">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="text-xs font-bold uppercase tracking-widest text-neutral-400">NIC Structured</span>
+</div>
+<div class="bg-white/5 p-8 rounded-2xl border border-white/5 flex flex-col items-center text-center backdrop-blur-2xl">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="text-xs font-bold uppercase tracking-widest text-neutral-400">Aadhaar Linked</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 px-6 md:px-12" id="contact">
+<div class="max-w-7xl mx-auto flex justify-center">
+<div class="glass-panel p-12 md:p-20 rounded-[3rem] border border-white/5 text-center max-w-xl w-full">
+<div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/10 border border-primary/20 mb-8">
+<span class="material-symbols-outlined text-primary text-5xl" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<h2 class="text-sm font-headline text-primary uppercase tracking-[0.3em] mb-4">Contact Protocol</h2>
+<h3 class="text-4xl md:text-5xl font-headline font-bold text-neutral-100 mb-4 leading-tight">Let's Build the Future.</h3>
+<p class="text-lg text-on-surface-variant mb-10">Ready to initiate a high-performance project? Reach out for a technical consultation.</p>
+<div class="text-2xl md:text-3xl font-headline font-bold text-neutral-100 mb-10 select-all">gaurav.vashistha09@gmail.com</div>
+<a href="mailto:gaurav.vashistha09@gmail.com?subject=Protocol%20Initiation%3A%20%5BProject%20Inquiry%5D" class="inline-block bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-4 rounded-full font-headline font-bold text-lg hover:shadow-[0_0_40px_rgba(255,191,0,0.2)] transition-all">
+                    START TRANSMISSION
+                </a>
+<div class="flex items-center justify-center gap-2 mt-8">
+<span class="material-symbols-outlined text-primary text-lg">schedule</span>
+<span class="text-sm font-headline text-on-surface-variant">IST: 09:00 - 18:00</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 border-t border-white/5">
+<div class="flex flex-col items-center md:items-start mb-8 md:mb-0">
+<div class="text-lg font-black text-neutral-200 uppercase tracking-widest mb-4">BHISHAJ TECH</div>
+<div class="font-['Manrope'] text-xs text-neutral-500">© 2026 BHISHAJ TECHNOLOGIES. All rights reserved.</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Manrope'] text-xs text-neutral-500 hover:text-amber-400 transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Manrope'] text-xs text-neutral-500 hover:text-amber-400 transition-colors" href="#">Terms of Service</a>
+<a class="font-['Manrope'] text-xs text-neutral-500 hover:text-amber-400 transition-colors" href="#">LinkedIn</a>
+<a class="font-['Manrope'] text-xs text-neutral-500 hover:text-amber-400 transition-colors" href="mailto:gaurav.vashistha09@gmail.com">Email</a>
+</div>
+</footer>
+</body></html>
